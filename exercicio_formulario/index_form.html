@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../exercicio_formulario/style/style.css">
+    <script src="https://kit.fontawesome.com/3a9ade90d2.js" crossorigin="anonymous"></script>
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="logo"><img src="../img/logo.png" alt=""></div>
+    <div class="container">
+        <div class="image">
+            <img src="img/undraw_forms_re_pkrt.svg">
+        </div>
+        <!-- Criação do formulário de Cadastro  -->
+        <div class="cadastro_box">
+            <h2>Cadastro</h2>
+            <form id="cadastro_box" action="../exercicio_formulario/php/process.php" method="POST">
+                <div class="all_input">
+                        <div class="input_box">
+                            <span><i class="fa-solid fa-pen-nib" style="color: #B197FC;"></i> Nome</span>
+                            <input type="text" name="nome_input" id="nome_input" placeholder="Insira o nome" required>
+                        </div>
+                        <div class="input_box">
+                            <span><i class="fa-solid fa-pen-nib" style="color: #B197FC;"></i> Sobrenome</span>
+                            <input type="text" name="sobrenome_input" id="sobrenome_input" placeholder="Insira o sobrenome" required">
+                        </div>
+                        <div class="input_box">
+                            <span><i class="fa-solid fa-envelope" style="color: #B197FC;"></i> E-mail</span>
+                            <input type="text" name="email_input" id="email_input" placeholder="Insira o e-mail" required>
+                        </div>
+                        <div class="input_box">
+                            <span><i class="fa-solid fa-lock" style="color: #B197FC;"></i> Senha</span>
+                            <input type="password" name="senha_input" id="senha_input" placeholder="Insira a senha" required>
+                        </div>
+                        <div class="input_box">
+                            <span><i class="fa-solid fa-lock" style="color: #B197FC;"></i> Confirmar Senha</span>
+                            <input type="password" name="confirmar_senha_input" id="confirmar_senha_input" placeholder="Confirme sua senha" required>
+                        </div>
+                        <div class="input_box">
+                            <span><i class="fa-sharp fa-regular fa-calendar-days" style="color: #B197FC;"></i> Data de Nascimento</span>
+                            <input type="date" name="data_nasc" id="data_nasc" min="1900-01-01" max="2024-12-31" required value="2000-05-05">
+                        </div>
+                        <p>Já possui uma conta? <a href="../exercicio_login/index.html" target="_self" rel="next">LOGIN</a></p>
+                            <div class="salvar_button">
+                                <button type="submit" onclick="salvar()"><a href="#">Cadastrar</a></button>
+                                <button><a href="../index.html" class="button">Voltar</a>                                </button>
+                            </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+    <script src="../exercicio_formulario/function/function.js"></script>
+</body>
+</html>
+
+

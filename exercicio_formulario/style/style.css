@@ -1,0 +1,165 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    width: 100%;
+    height: 100vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fce7c0;
+}
+
+.logo img {
+    display: flex;
+    width: 8%;
+    margin: 1rem 2rem;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container{
+    width: 80%;
+    height: 87vh;
+    display: flex;
+    box-shadow: 9px 9px 10px rgba(0, 0, 0, .212);
+}
+
+.image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#fdeed2;
+    padding: 1rem;
+}
+
+.image img{
+    width: 25rem;
+}
+
+.cadastro_box{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 8rem;
+
+}
+
+.cadastro_box h2{
+    font-size: 20px;
+    margin-left: 6px;
+    margin-bottom: 10px;
+    color: #979797;
+}
+.all_input p{
+    margin-top: 0.5rem;
+    font-size: 15px;
+    margin-left: 0.75rem;
+}
+.all_input a{
+    text-decoration: none;
+    color: #c20091;
+}
+
+
+.salvar_button{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    
+}
+
+.salvar_button button{
+    width: 40%;
+    border: none;
+    background-color: #fdeed2;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 0.9rem;
+    
+}
+
+.salvar_button button:hover{
+    background-color: #ffe3ae;
+}
+
+.salvar_button button a{
+    text-decoration: none;
+    font-weight:900;
+    color: #000000;
+}
+
+
+.input_box input{
+    margin: 0.6rem 0 1rem;
+    width: 97%;
+    padding: 0.8rem;
+    border: solid 1px #ffdea1;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #0000001c;
+}
+
+.input_box input:focus-visible{
+    outline: 1px solid #ffce74;
+}
+.input_box span{
+    font-size: 15px;
+    margin-left: 6px;
+    color: #979797;
+
+}
+
+/* Tornando a página responsiva */
+@media screen and (max-width: 1200px){
+    .image{
+        display: none;
+    }
+    .container{
+        width: 50%;
+    }
+    .cadastro_box{
+        width: 100%;
+    }
+    .salvar_button {
+        width: 90%;
+        width: auto;
+       
+         }
+    .salvar_button button{
+        width: 90%;
+        width: auto;
+       
+         }
+
+
+}
+@media screen and (max-width: 1300px){
+    .container{
+        width: 90%;
+        height: auto;
+    }
+    .salvar_button button{
+        width: 80%;
+        width: auto;
+       
+         }
+    .all_input{
+        flex-direction: column;
+        overflow: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+
+    }
+}

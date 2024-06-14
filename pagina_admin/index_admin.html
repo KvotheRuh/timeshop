@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../pagina_admin/style/style_admin.css">
+    <title>Administrador</title>
+</head>
+<body>
+    <div class="logo"><img src="../img/logo.png" alt=""></div>
+    <div class="container">
+        <!-- Criação do formulário de Cadastro  -->
+        <div class="trocar_paginas">
+            <input type="radio" name="trocar" id="trocar_produtos" checked onclick="mostrar_cadastro('cadastro_produtos')">
+            <label for="trocar_produtos">Cadastrar Produtos</label>
+            <input type="radio" name="trocar" id="trocar_pessoas" onclick="mostrar_cadastro('cadastro_pessoas')">
+            <label for="trocar_pessoas">Cadastrar Pessoas</label>
+        </div>
+        <!-- Formulário dos produtos -->
+        <div class="cadastro_produtos"> 
+            <h2>Cadastra Produtos</h2>
+            <form id="cadastro_produtos" action="../pagina_adim/php/insert.php" method="POST" enctype="multipart/form-data">
+                <div class="all_input">
+                    <div class="input_box">
+                        <span><i class="fa-solid fa-pen-nib" style="color: #B197FC;"></i> Imagem do Produto</span>
+                        <input type="file" name="imagem_produto" id="imagem_produto">
+                    </div>
+                        <div class="input_box">
+                            <span><i class="fa-solid fa-pen-nib" style="color: #B197FC;"></i> Nome do Produto</span>
+                            <input type="text" name="nome_produto" id="nome_produto" placeholder="Insira o nome">
+                        </div>
+                        <div class="input_box">
+                            <span><i class="fa-solid fa-pen-nib" style="color: #B197FC;"></i> Descrição</span>
+                            <input type="text" name="descricao_produto" id="descricao_produto" placeholder="Insira a descrição">
+                        </div>
+                        <div class="input_box">
+                            <span><i class="fa-solid fa-envelope" style="color: #B197FC;"></i> Valor Produto</span>
+                            <input type="text" name="valor_produto" id="valor_produto" placeholder="Insira o valor">
+                        </div>
+                        <div class="input_box">
+                            <span><i class="fa-solid fa-lock" style="color: #B197FC;"></i> Quantidade Disponível</span>
+                            <input type="text" name="quantidade_produto" id="quantidade_produto" placeholder="Insira a quantidade">
+                        </div>
+                        <div class="input_box">
+                            <span><i class="fa-sharp fa-regular fa-calendar-days" style="color: #B197FC;"></i> Data do Registro do Produto</span>
+                            <input type="date" name="data_insert" id="data_insert" min="1900-01-01" max="2024-12-31">
+                        </div>
+                            <div class="salvar_button">
+                                <button type="submit" onclick="adicionar()"><a href="#">Cadastrar</a></button>
+                                <button type="submit" onclick="excluir()"><a href="#">Apagar</a></button>
+                                <button type="submit" onclick="update()"><a href="#">Atualizar</a></button>
+                            </div>
+                    </div>
+
+                </form>          
+        </div>
+        <!-- Formulário para adicionar administradores -->
+        <div class="cadastro_pessoas" style="display: none;">
+            <h2>Cadastrar Pessoas</h2>
+            <form id="cadastro_pessoas_form" action="../pagina_adim/php/insert_pessoa.php" method="POST">
+                <div class="all_input">
+                    <div class="input_box">
+                        <span><i class="fa-solid fa-pen-nib" style="color: #B197FC;"></i> Nome do funcionario</span>
+                        <input type="text" name="nome_funcionario" id="nome_funcionario" placeholder="Insira o nome do funcionario">
+                    </div>
+                    <div class="input_box">
+                        <span><i class="fa-solid fa-pen-nib" style="color: #B197FC;"></i> E-mail</span>
+                        <input type="text" name="email_funcionario" id="email_funcionario" placeholder="Insira a e-mail">
+                    </div>
+                    <div class="input_box">
+                        <span><i class="fa-solid fa-lock" style="color: #B197FC;"></i> Senha</span>
+                        <input type="password" name="senha_funcionario" id="senha_funcionario" placeholder="Insira o senha">
+                    </div>
+                    <div class="input_box">
+                        <span><i class="fa-solid fa-lock" style="color: #B197FC;"></i> Confirmar Senha</span>
+                        <input type="password" name="confirmar_senha_input" id="confirmar_senha_input" placeholder="Confirme sua senha" required>
+                    </div>
+                    <div class="salvar_button">
+                        <button type="submit" onclick="adicionar_pessoa()"><a href="#">Cadastrar</a></button>
+                        <button type="submit" onclick="excluir_pessoa()"><a href="#">Apagar</a></button>
+                        <button type="submit" onclick="update_pessoa()"><a href="#">Atualizar</a></button>
+                        </div>
+            </form>
+        </div>
+
+    </div>
+    <script src="../pagina_admin/function/function.js"></script>
+    <script src="../pagina_admin/function/add_funcionario.js"></script>
+</body>
+</html>
+
+
